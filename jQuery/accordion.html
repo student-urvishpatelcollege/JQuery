@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion FAQ</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        padding: 40px;
+        max-width: 700px;
+        margin: auto;
+    }
+
+    h1,
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+
+    h3{
+        margin-left: 10px;
+    }
+
+    .faq {
+        margin: 20px 0;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #fff;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .faq p {
+        padding: 5px 15px;
+        display: none;
+        margin: 0;
+        background-color: #fff;
+        color: #444;
+        letter-spacing: 1px;
+    }
+</style>
+
+<body>
+    <h1>Accordion</h1>
+    <h2>People also ask?</h2>
+    <div class="faq">
+        <h3>What does FAQ mean?</h4>
+            <p id="p">A frequently asked questions (FAQ) list is often used in articles, websites, email lists, and
+                online
+                forums where
+                common questions tend to recur, for example through posts or queries by new users related to common
+                knowledge
+                gaps.</p>
+    </div>
+    <div class="faq">
+        <h3>What is the full form of ASAP?</h3>
+        <p>The full form of ASAP is As Soon As Possible. It's an acronym used to indicate urgency and a need for
+            immediate action or completion of a task. </p>
+    </div>
+    <div class="faq">
+        <h3>What is FAQ format?</h3>
+        <p>An FAQ page (short for Frequently Asked Question page) is a part of your website that provides answers to
+            common questions, assuages concerns, and overcomes objections. It's a space where customers can delve into
+            the finer details of your product or service, away from your sales-focused landing pages and homepage.</p>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('.faq h3').click(function () {
+                $(this).next('p').slideToggle()
+            })
+        })
+    </script>
+</body>
+
+</html>
